@@ -1,9 +1,8 @@
-
 [
   {
     "kind": "column",
-    "name": "OpenAI (Assistants)",
-    "description": "Create, modify and run OpenAI Assistants.",
+    "name": "Create OpenAI Thread and Run",
+    "description": "Create a new thread and immediately start a run in OpenAI's API, including all optional configurations.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
@@ -12,18 +11,93 @@
         "type": "string"
       },
       {
-        "name": "endpoint",
-        "displayName": "API Endpoint (Required)",
+        "name": "assistant_id",
+        "displayName": "Assistant ID (Required)",
         "type": "string"
       },
       {
-        "name": "body",
-        "displayName": "Body (JSON Schema Required)",
+        "name": "thread_messages",
+        "displayName": "Thread Messages (JSON format, Optional)",
         "type": "string"
       },
       {
-        "name": "json",
-        "displayName": "JSON Schema (Output)",
+        "name": "include",
+        "displayName": "Include Fields (Optional, comma separated)",
+        "type": "string"
+      },
+      {
+        "name": "model",
+        "displayName": "Model (Optional)",
+        "type": "string"
+      },
+      {
+        "name": "instructions",
+        "displayName": "Instructions (Optional)",
+        "type": "string"
+      },
+      {
+        "name": "additional_instructions",
+        "displayName": "Additional Instructions (Optional)",
+        "type": "string"
+      },
+      {
+        "name": "additional_messages",
+        "displayName": "Additional Messages (JSON format, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "tools",
+        "displayName": "Tools (JSON format, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "metadata",
+        "displayName": "Metadata (JSON format, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "temperature",
+        "displayName": "Temperature (Optional)",
+        "type": "number"
+      },
+      {
+        "name": "top_p",
+        "displayName": "Top P (Optional)",
+        "type": "number"
+      },
+      {
+        "name": "stream",
+        "displayName": "Stream (true/false, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "max_prompt_tokens",
+        "displayName": "Max Prompt Tokens (Optional)",
+        "type": "number"
+      },
+      {
+        "name": "max_completion_tokens",
+        "displayName": "Max Completion Tokens (Optional)",
+        "type": "number"
+      },
+      {
+        "name": "truncation_strategy",
+        "displayName": "Truncation Strategy (JSON format, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "tool_choice",
+        "displayName": "Tool Choice (Optional)",
+        "type": "string"
+      },
+      {
+        "name": "parallel_tool_calls",
+        "displayName": "Parallel Tool Calls (true/false, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "response_format",
+        "displayName": "Response Format (JSON format, Optional)",
         "type": "string"
       }
     ],
